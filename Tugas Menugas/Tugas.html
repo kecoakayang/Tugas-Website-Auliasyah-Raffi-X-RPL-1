@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iron & Allied | Cold War Surplus Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+      .hero {
+ position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+    
+    background-image: url('c:\Users\USER\Documents\Kisi-Kisi & Pelajaran\Tugas Menugas\e8f6b6e4-f103-4dcb-9c0f-a92b3742ed62.jpeg');
+    background-size: cover;
+    background-position: center;
+      }
+   
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <i class="fa-solid fa-shield-halved"></i>
+            <span>IRON & ALLIED</span>
+        </div>
+        <nav>
+            <a href="#beranda" class="active">Beranda</a>
+            <a href="#seragam">Koleksi Seragam</a>
+            <a href="#senjata">Arsenal Senjata</a>
+            <a href="#intel">Custom Kurasi</a>
+        </nav>
+        <div class="cart-icon" onclick="bukaKeranjang()" style="cursor: pointer;">
+            <i class="fa-solid fa-boxes-stacked"></i>
+            <span class="badge" id="cart-badge">0</span>
+        </div>
+    </header>
+
+    <main>
+        <section id="beranda" class="hero">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <span class="subtitle">Eksplorasi Sejarah 1947 - 1991</span>
+                <h1>Galeri & Pembuatan Militer Era Perang Dingin</h1>
+                <p>Menyediakan seragam militer orisinal, perlengkapan taktis vintage, serta display replika senjata legendaris dari Blok Barat dan Pakta Warsawa dengan standar preservasi museum.</p>
+                <div class="hero-buttons">
+                    <a href="#seragam" class="btn btn-primary">Gudang Seragam</a>
+                    <a href="#senjata" class="btn btn-secondary">Arsenal Senjata</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="seragam" class="products-section">
+            <div class="section-header">
+                <h2>Koleksi Surplus Seragam Militer</h2>
+                <p>Katalog kain sejarah orisinal yang dikurasi langsung dari sisa-sisa inventaris logistik perang abad ke-20.</p>
+            </div>
+
+            <div class="product-grid">
+                <div class="product-card" onclick="bukaDeskripsi('us-m65')">
+                    <div class="product-tag rarity-common">Ikonik</div>
+                    <div class="product-img-wrapper">
+                        <img src="c:\Users\USER\Documents\Kisi-Kisi & Pelajaran\Tugas Menugas\N65_07front.jpg" alt="US M65 Field Jacket">
+                    </div>
+                    <div class="product-info">
+                        <span class="country">Amerika Serikat • Era 1965</span>
+                        <h3>US M65 Field Jacket (OG-107)</h3>
+                        <p class="specs"><strong>Material:</strong> NYCO Cotton Blend Tough<br><strong>Kondisi:</strong> Mint Condition (NOS)</p>
+                        <div class="price-row">
+                            <span class="price">Rp 2.450.000</span>
+                            <button class="btn-cart" onclick="event.stopPropagation(); tambahKeKeranjang('us-m65');"><i class="fa-solid fa-basket-shopping"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" onclick="bukaDeskripsi('soviet-afghanka')">
+                    <div class="product-tag rarity-rare">Langka</div>
+                    <div class="product-img-wrapper">
+                        <img src="c:\Users\USER\Documents\Kisi-Kisi & Pelajaran\Tugas Menugas\Afghanka.jpg" alt="Soviet Afghanka Uniform">
+                    </div>
+                    <div class="product-info">
+                        <span class="country">Uni Soviet • Era 1980-an</span>
+                        <h3>Soviet Afghanka Uniform Set</h3>
+                        <p class="specs"><strong>Material:</strong> Heavy-duty Canvas Khaki<br><strong>Kondisi:</strong> Terpakai (Battle Tested)</p>
+                        <div class="price-row">
+                            <span class="price">Rp 3.100.000</span>
+                            <button class="btn-cart" onclick="event.stopPropagation(); tambahKeKeranjang('soviet-afghanka');"><i class="fa-solid fa-basket-shopping"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" onclick="bukaDeskripsi('strichtarn-rain')">
+                    <div class="product-tag rarity-rare">Kolektor Item</div>
+                    <div class="product-img-wrapper">
+                        <img src="c:\Users\USER\Documents\Kisi-Kisi & Pelajaran\Tugas Menugas\NVA.jpg" alt="Strichtarn Pattern Jacket">
+                    </div>
+                    <div class="product-info">
+                        <span class="country">Jerman Timur (GDR) • Era 1970</span>
+                        <h3>Strichtarn Rain Pattern Jacket</h3>
+                        <p class="specs"><strong>Material:</strong> Densely Woven Camo Cotton<br><strong>Kondisi:</strong> Excellent Deadstock</p>
+                        <div class="price-row">
+                            <span class="price">Rp 1.850.000</span>
+                            <button class="btn-cart" onclick="event.stopPropagation(); tambahKeKeranjang('strichtarn-rain');"><i class="fa-solid fa-basket-shopping"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" onclick="bukaDeskripsi('british-dpm')">
+                    <div class="product-tag rarity-common">Autentik</div>
+                    <div class="product-img-wrapper">
+                        <img src="c:\Users\USER\Documents\Kisi-Kisi & Pelajaran\Tugas Menugas\BRIISH.jpg" alt="British DPM Smock">
+                    </div>
+                    <div class="product-info">
+                        <span class="country">Inggris • Era 1980-an</span>
+                        <h3>British DPM Windproof Smock</h3>
+                        <p class="specs"><strong>Material:</strong> Gabardine Weatherproof<br><strong>Kondisi:</strong> Grade A Surplus</p>
+                        <div class="price-row">
+                            <span class="price">Rp 1.950.000</span>
+                            <button class="btn-cart" onclick="event.stopPropagation(); tambahKeKeranjang('british-dpm');"><i class="fa-solid fa-basket-shopping"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" onclick="bukaDeskripsi('west-german')">
+                    <div class="product-tag rarity-common">Populer</div>
+                    <div class="product-img-wrapper">
+                        <img src="c:\Users\USER\Documents\Kisi-Kisi & Pelajaran\Tugas Menugas\Flectrn.jpg" alt="West German Flecktarn Parka">
+                    </div>
+                    <div class="product-info">
+                        <span class="country">Jerman Barat • Era 1990</span>
+                        <h3>West German Flecktarn Parka</h3>
+                        <p class="specs"><strong>Material:</strong> Cotton-Poly Premium Blend<br><strong>Kondisi:</strong> Very Good Surplus</p>
+                        <div class="price-row">
+                            <span class="price">Rp 1.350.000</span>
+                            <button class="btn-cart" onclick="event.stopPropagation(); tambahKeKeranjang('west-german');"><i class="fa-solid fa-basket-shopping"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" onclick="bukaDeskripsi('french-f2')">
+                    <div class="product-tag rarity-common">Minimalis</div>
+                    <div class="product-img-wrapper">
+                        <img src="c:\Users\USER\Documents\Kisi-Kisi & Pelajaran\Tugas Menugas\frencharmyf2.jpg" alt="French F2 Uniform">
+                    </div>
+                    <div class="product-info">
+                        <span class="country">Prancis • Era 1980-an</span>
+                        <h3>French F2 Combat Uniform</h3>
+                        <p class="specs"><strong>Material:</strong> Heavy Satin Cotton Satin<br><strong>Kondisi:</strong> Unused Vintage Condition</p>
+                        <div class="price-row">
+                            <span class="price">Rp 1.200.000</span>
+                            <button class="btn-cart" onclick="event.stopPropagation(); tambahKeKeranjang('french-f2');"><i class="fa-solid fa-basket-shopping"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" onclick="bukaDeskripsi('chinese-type65')">
+                    <div class="product-tag rarity-rare">Langka</div>
+                    <div class="product-img-wrapper">
+                        <img src="c:\Users\USER\Documents\Kisi-Kisi & Pelajaran\Tugas Menugas\type65.jpg" alt="Chinese Type 65 Coat">
+                    </div>
+                    <div class="product-info">
+                        <span class="country">Tiongkok • Era 1965</span>
+                        <h3>Chinese Type 65 Liberation Coat</h3>
+                        <p class="specs"><strong>Material:</strong> Rugged Cotton Drill Cloth<br><strong>Kondisi:</strong> Deadstock Unissued</p>
+                        <div class="price-row">
+                            <span class="price">Rp 2.100.000</span>
+                            <button class="btn-cart" onclick="event.stopPropagation(); tambahKeKeranjang('chinese-type65');"><i class="fa-solid fa-basket-shopping"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" onclick="bukaDeskripsi('yugoslavian-m77')">
+                    <div class="product-tag rarity-rare">Langka</div>
+                    <div class="product-img-wrapper">
+                        <img src="c:\Users\USER\Documents\Kisi-Kisi & Pelajaran\Tugas Menugas\M55JacketFront.jpg" alt="Yugoslavian Overcoat">
+                    </div>
+                    <div class="product-info">
+                        <span class="country">Yugoslavia • Era 1977</span>
+                        <h3>Yugoslavian M77 Heavy Jacket</h3>
+                        <p class="specs"><strong>Material:</strong> Thick Heavy Wool Blend<br><strong>Kondisi:</strong> Authentic Store Grade B</p>
+                        <div class="price-row">
+                            <span class="price">Rp 1.750.000</span>
+                            <button class="btn-cart" onclick="event.stopPropagation(); tambahKeKeranjang('yugoslavian-m77');"><i class="fa-solid fa-basket-shopping"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" onclick="bukaDeskripsi('swedish-m59')">
+                    <div class="product-tag rarity-common">Klasik</div>
+                    <div class="product-img-wrapper">
+                        <img src="c:\Users\USER\Documents\Kisi-Kisi & Pelajaran\Tugas Menugas\m59.jpg" alt="Swedish Army Tunic">
+                    </div>
+                    <div class="product-info">
+                        <span class="country">Swedia • Era 1960</span>
+                        <h3>Swedish M59 Field Tunic</h3>
+                        <p class="specs"><strong>Material:</strong> High-Density Army Canvas<br><strong>Kondisi:</strong> Mint Warehouse Stock</p>
+                        <div class="price-row">
+                            <span class="price">Rp 1.600.000</span>
+                            <button class="btn-cart" onclick="event.stopPropagation(); tambahKeKeranjang('swedish-m59');"><i class="fa-solid fa-basket-shopping"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" onclick="bukaDeskripsi('soviet-telogreika')">
+                    <div class="product-tag rarity-rare">Sangat Langka</div>
+                    <div class="product-img-wrapper">
+                        <img src="c:\Users\USER\Documents\Kisi-Kisi & Pelajaran\Tugas Menugas\Telogreika.jpg" alt="Soviet Quilted Jacket">
+                    </div>
+                    <div class="product-info">
+                        <span class="country">Uni Soviet • Era 1950-an</span>
+                        <h3>Soviet Telogreika Quilted Jacket</h3>
+                        <p class="specs"><strong>Material:</strong> Heavy Padded Thermal Cotton<br><strong>Kondisi:</strong> Vintage Original Museum Grade</p>
+                        <div class="price-row">
+                            <span class="price">Rp 3.400.000</span>
+                            <button class="btn-cart" onclick="event.stopPropagation(); tambahKeKeranjang('soviet-telogreika');"><i class="fa-solid fa-basket-shopping"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" onclick="bukaDeskripsi('us-chocochip')">
+                    <div class="product-tag rarity-west">Desert</div>
+                    <div class="product-img-wrapper">
+                        <img src="c:\Users\USER\Documents\Kisi-Kisi & Pelajaran\Tugas Menugas\chocochip.jpg" alt="US Desert Camo">
+                    </div>
+                    <div class="product-info">
+                        <span class="country">Amerika Serikat • Era 1980</span>
+                        <h3>US "Chocolate Chip" Desert BDU</h3>
+                        <p class="specs"><strong>Material:</strong> Lightweight Ripstop Cotton<br><strong>Kondisi:</strong> Unissued Crisp Condition</p>
+                        <div class="price-row">
+                            <span class="price">Rp 1.900.000</span>
+                            <button class="btn-cart" onclick="event.stopPropagation(); tambahKeKeranjang('us-chocochip');"><i class="fa-solid fa-basket-shopping"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<section id="senjata" class="weapons-section">
+            <div class="section-header">
+                <h2>Arsenal Senjata</h2>
+                <p>Persenjataan Airsoft Yang Panas Di Tengah Konflik Yang Dingin.</p>
+            </div>
+<section id="senjata" class="weapons-section">
+            <div class="section-header">
+                <h2>Arsenal Senjata</h2>
+                <p>Airsoft Senjata Pilihan sedang dalam rute Perjalanan.</p>
+            </div>
+
+            <div class="split-container">
+                <div class="bloc-column eastern-bloc">
+                    <div class="bloc-header">
+                        <i class="fa-solid fa-star"></i>
+                        <h3>Blok Timur / Pakta Warsawa</h3>
+                    </div>
+                    <div class="weapon-list">
+                        <div class="weapon-item">
+                            <span class="num">01</span>
+                            <div class="weapon-img-mini">
+                                <img src="c:\Users\USER\Documents\Kisi-Kisi & Pelajaran\Tugas Menugas\WhatsApp_Image_2025_07_25_at_13_33_35.jpeg" alt="AK-47">
+                            </div>
+                            <div class="weapon-detail">
+                                <h4>AK-47 <span class="badge-weapon">USSR</span></h4>
+                                <p>Senapan serbu paling ikonik di dunia rancangan Mikhail Kalashnikov.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bloc-column western-alliance">
+                    <div class="bloc-header">
+                        <i class="fa-solid fa-jet-fighter"></i>
+                        <h3>Blok Barat / NATO Alliance</h3>
+                    </div>
+                    <div class="weapon-list">
+                        <div class="weapon-item">
+                            <span class="num">02</span>
+                            <div class="weapon-img-mini">
+                                <img src="c:\Users\USER\Documents\Kisi-Kisi & Pelajaran\Tugas Menugas\cover_VFC_M16A1.jpg" alt="M16A1">
+                            </div>
+                            <div class="weapon-detail">
+                                <h4>M16A1 <span class="badge-weapon west">USA</span></h4>
+                                <p>Senapan serbu legendaris pasukan AS di kancah perang Vietnam.</p>
+                            </div>
+                        </div>
+                        <div class="weapon-item">
+                            <span class="num">03</span>
+                            <div class="weapon-img-mini">
+                                <img src="c:\Users\USER\Documents\Kisi-Kisi & Pelajaran\Tugas Menugas\VFC_LAR_2.jpg" alt="FN FAL">
+                            </div>
+                            <div class="weapon-detail">
+                                <h4>FN FAL <span class="badge-weapon west">Belgium</span></h4>
+                                <p>Dijuluki sebagai "The Right Arm of the Free World" karena masifnya adopsi NATO.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 30px; border-top: 1px solid #333; padding-top: 20px;">
+                <p style="color: #666; font-style: italic;">...dan lebih banyak lagi Armament Supply Incoming.</p>
+            </div>
+        </section>
+            <div class="supply-status" style="text-align: center; padding: 80px 20px; border: 2px dashed #444; border-radius: 8px; margin: 20px auto; max-width: 600px; background: #1a1a1a;">
+                <i class="fa-solid fa-truck-field" style="font-size: 50px; color: #555; margin-bottom: 20px;"></i>
+                <h3 style="color: #fff; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 10px;">Armament Supply Incoming...</h3>
+                <p style="color: #777; font-size: 1em;">Sedang menunggu proses restock dari gudang logistik pusat.</p>
+            </div>
+        </section>
+
+        <section id="intel" class="ux-form-section">
+            <div class="section-header">
+                <h2>Pemesanan & Alur Kurasi Intelijen</h2>
+                <p>Mencari arsip benda sejarah atau seragam dari tahun/negara spesifik? Kirimkan kode intel Anda.</p>
+            </div>
+
+            <div class="form-container">
+                <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Permintaan pencarian intelijen surplus Anda telah dicatat oleh markas logistik pusat.');">
+                    <div class="form-group">
+                        <label for="nama">Nama Kolektor / Instansi</label>
+                        <input type="text" id="nama" placeholder="Masukkan nama lengkap / kode panggil..." required>
+                    </div>
+                    <div class="form-group">
+                        <label for="faksi">Faksi / Fokus Koleksi Arsip</label>
+                        <select id="faksi">
+                            <option value="timur">Blok Timur (Soviet & Sekutu Pakta Warsawa)</option>
+                            <option value="barat">Blok Barat (AS & Sekutu NATO)</option>
+                            <option value="nonblok">Faksi Non-Blok / Konflik Regional Proxy</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="pesan">Detail Spesifikasi Item yang Dicari</label>
+                        <textarea id="pesan" rows="4" placeholder="Contoh: Mencari masker gas GP-5 Soviet orisinal..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Kirim Permintaan Kurasi</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="keranjang-page" class="cart-page-section" style="display: none;">
+            <div class="section-header">
+                <h2>Keranjang Logistik Anda</h2>
+                <p>Daftar amunisi dan kain sejarah yang siap Anda amankan ke markas pribadi.</p>
+            </div>
+            <div class="cart-container">
+                <div class="cart-items-list"></div>
+                <div class="cart-summary-card">
+                    <h3>Ringkasan Logistik</h3>
+                    <div class="summary-row">
+                        <span>Subtotal</span>
+                        <span id="subtotal-val">Rp 0</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Pajak Preservasi</span>
+                        <span>Rp 0</span>
+                    </div>
+                    <hr>
+                    <div class="summary-row total-row">
+                        <span>Total Biaya</span>
+                        <span id="total-val">Rp 0</span>
+                    </div>
+                    <button class="btn btn-primary btn-block" onclick="bukaCheckout()">Lanjutkan ke Checkout</button>
+                    <button class="btn btn-secondary btn-block" onclick="kembaliKeBeranda()" style="margin-top: 10px;">Kembali Belanja</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="checkout-page" class="checkout-page-section" style="display: none;">
+            <div class="section-header">
+                <h2>Prosedur Deklarasi & Checkout</h2>
+                <p>Isi manifes pengiriman logistik militer dengan aman dan terenkripsi.</p>
+            </div>
+            <div class="checkout-container">
+                <div class="checkout-form-card">
+                    <h3>Manifes Pengiriman</h3>
+                    <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Pesanan logistik Anda telah diproses! Nomor manifes intelijen dikirim ke kontak Anda.'); kembaliKeBeranda();">
+                        <div class="form-group">
+                            <label for="co-nama">Nama Penerima / Kode Sandi</label>
+                            <input type="text" id="co-nama" placeholder="Masukkan nama lengkap..." required>
+                        </div>
+                        <div class="form-group">
+                            <label for="co-alamat">Alamat Koordinat Pengiriman</label>
+                            <textarea id="co-alamat" rows="3" placeholder="Masukkan alamat pengiriman lengkap..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Konfirmasi Manifes</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="modal-overlay" id="product-modal" onclick="tutupDeskripsi()">
+        <div class="modal-card" onclick="event.stopPropagation()">
+            <button class="modal-close" onclick="tutupDeskripsi()">&times;</button>
+            <div class="modal-body">
+                <div class="modal-img-wrapper">
+                    <img id="modal-img" src="" alt="">
+                </div>
+                <div class="modal-info">
+                    <span class="country" id="modal-country"></span>
+                    <h3 id="modal-title"></h3>
+                    <div class="modal-desc" id="modal-desc-text"></div>
+                    <div class="modal-specs" id="modal-specs-text"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const dataProduk = {
+            'us-m65': { title: 'US M65 Field Jacket (OG-107)', country: 'Amerika Serikat • Era 1965', price: 2450000, img: 'c:\\Users\\USER\\Documents\\Kisi-Kisi & Pelajaran\\Tugas Menugas\\N65_07front.jpg', desc: 'Jaket lapangan legendaris militer Amerika Serikat yang diperkenalkan secara masif saat Perang Vietnam. Menjadi simbol budaya pop global dan ketahanan pakaian luar militer.', specs: '<strong>Material:</strong> NYCO Cotton Blend Tough<br><strong>Kondisi:</strong> Mint Condition (NOS)<br><strong>Fitur:</strong> Built-in Hood, Lapisan Tahan Angin' },
+            'soviet-afghanka': { title: 'Soviet Afghanka Uniform Set', country: 'Uni Soviet • Era 1980-an', price: 3100000, img: 'c:\\Users\\USER\\Documents\\Kisi-Kisi & Pelajaran\\Tugas Menugas\\Afghanka.jpg', desc: 'Seragam tempur standar Angkatan Darat Soviet yang dirancang khusus menghadapi kerasnya medan perang dalam Perang Uni Soviet-Afganistan abad ke-20.', specs: '<strong>Material:</strong> Heavy-duty Canvas Khaki<br><strong>Kondisi:</strong> Terpakai (Battle Tested)<br><strong>Komponen:</strong> Kemeja Taktis & Celana Kargo' },
+            'strichtarn-rain': { title: 'Strichtarn Rain Pattern Jacket', country: 'Jerman Timur (GDR) • Era 1970', price: 1850000, img: 'c:\\Users\\USER\\Documents\\Kisi-Kisi & Pelajaran\\Tugas Menugas\\NVA.jpg', desc: 'Kamuflase garis hujan (*Strichtarn*) khas militer Jerman Timur. Dirancang untuk mengelabui sensor inframerah generasi awal milik pasukan aliansi Barat.', specs: '<strong>Material:</strong> Densely Woven Camo Cotton<br><strong>Kondisi:</strong> Excellent Deadstock<br><strong>Kantong:</strong> Kompartemen Magasin Internal' },
+            'british-dpm': { title: 'British DPM Windproof Smock', country: 'Inggris • Era 1980-an', price: 1950000, img: 'c:\\Users\\USER\\Documents\\Kisi-Kisi & Pelajaran\\Tugas Menugas\\BRIISH.jpg', desc: 'Smock pelindung cuaca ekstrim bermotif DPM (*Disruptive Pattern Material*). Andalan pasukan elite Inggris saat operasi tempur Perang Falkland.', specs: '<strong>Material:</strong> Gabardine Weatherproof<br><strong>Kondisi:</strong> Grade A Surplus<br><strong>Kancing:</strong> Canadian Slotted Buttons Premium' },
+            'west-german': { title: 'West German Flecktarn Parka', country: 'Jerman Barat • Era 1990', price: 1350000, img: 'c:\\Users\\USER\\Documents\\Kisi-Kisi & Pelajaran\\Tugas Menugas\\Flectrn.jpg', desc: 'Parka kamuflase bintik Jerman Barat yang sangat efisien membaur dengan vegetasi hutan Eropa Tengah. Merupakan standar emas desain kamuflase modern.', specs: '<strong>Material:</strong> Cotton-Poly Premium Blend<br><strong>Kondisi:</strong> Very Good Surplus<br><strong>Proteksi:</strong> Jaket Berat dengan Tudung Kepala' },
+            'french-f2': { title: 'French F2 Combat Uniform', country: 'Prancis • Era 1980-an', price: 1200000, img: 'c:\\Users\\USER\\Documents\\Kisi-Kisi & Pelajaran\\Tugas Menugas\\frencharmyf2.jpg', desc: 'Seragam tempur minimalis andalan Legiun Asing Prancis. Terkenal karena potongan kainnya yang taktis, awet, serta modis untuk standar militer.', specs: '<strong>Material:</strong> Heavy Satin Cotton Satin<br><strong>Kondisi:</strong> Unused Vintage Condition<br><strong>Gaya:</strong> Desain Klasik F2 Prancis' },
+            'chinese-type65': { title: 'Chinese Type 65 Liberation Coat', country: 'Tiongkok • Era 1965', price: 2100000, img: 'c:\\Users\\USER\\Documents\\Kisi-Kisi & Pelajaran\\Tugas Menugas\\type65.jpg', desc: 'Mantel ikonik Tentara Pembebasan Rakyat (PLA) selama puncak gejolak geopolitik era 1960-an. Memiliki potongan kain drill katun tebal khas faksi timur.', specs: '<strong>Material:</strong> Rugged Cotton Drill Cloth<br><strong>Kondisi:</strong> Deadstock Unissued<br><strong>Warna:</strong> Klasik PLA Olive Green' },
+            'yugoslavian-m77': { title: 'Yugoslavian M77 Heavy Jacket', country: 'Yugoslavia • Era 1977', price: 1750000, img: 'c:\\Users\\USER\\Documents\\Kisi-Kisi & Pelajaran\\Tugas Menugas\\M55JacketFront.jpg', desc: 'Mantel wol musim dingin tebal militer Yugoslavia di bawah kepemimpinan Marshall Tito. Sangat hangat dan dirancang khusus untuk area pegunungan Balkan.', specs: '<strong>Material:</strong> Thick Heavy Wool Blend<br><strong>Kondisi:</strong> Authentic Store Grade B<br><strong>Berat:</strong> Sangat Berat Maksimal Thermal' },
+            'swedish-m59': { title: 'Swedish M59 Field Tunic', country: 'Swedia • Era 1960', price: 1600000, img: 'c:\\Users\\USER\\Documents\\Kisi-Kisi & Pelajaran\\Tugas Menugas\\m59.jpg', desc: 'Tunik lapangan Angkatan Darat Swedia dengan ciri khas dua saku belakang besar yang unik. Merepresentasikan desain utilitarian murni dari Skandinavia.', specs: '<strong>Material:</strong> High-Density Army Canvas<br><strong>Kondisi:</strong> Mint Warehouse Stock<br><strong>Fitur unik:</strong> Saku Belakang Ergonomis' },
+            'soviet-telogreika': { title: 'Soviet Telogreika Quilted Jacket', country: 'Uni Soviet • Era 1950-an', price: 3400000, img: 'c:\\Users\\USER\\Documents\\Kisi-Kisi & Pelajaran\\Tugas Menugas\\Telogreika.jpg', desc: 'Jaket empuk thermal legendaris Uni Soviet semenjak Perang Dunia II hingga pertengahan Perang Dingin. Pelindung utama prajurit dari ganasnya musim dingin Siberia.', specs: '<strong>Material:</strong> Heavy Padded Thermal Cotton<br><strong>Kondisi:</strong> Vintage Original Museum Grade<br><strong>Kekuatan:</strong> Jahitan Quilted Garis Tahan Robek' },
+            'us-chocochip': { title: 'US "Chocolate Chip" Desert BDU', country: 'Amerika Serikat • Era 1980', price: 1900000, img: 'c:\\Users\\USER\\Documents\\Kisi-Kisi & Pelajaran\\Tugas Menugas\\chocochip.jpg', desc: 'Seragam kamuflase 6 warna gurun pasir Amerika Serikat yang dijuluki pola kue cokelat. Digunakan secara masif pada operasi tempur awal di Timur Tengah.', specs: '<strong>Material:</strong> Lightweight Ripstop Cotton<br><strong>Kondisi:</strong> Unissued Crisp Condition<br><strong>Sirkulasi:</strong> Bahan Ringan Khusus Iklim Kering' }
+        };
+
+        let keranjang = [];
+
+        function tambahKeKeranjang(id) {
+            const produk = dataProduk[id];
+            if (!produk) return;
+
+            const itemAda = keranjang.find(item => item.id === id);
+            if (itemAda) {
+                itemAda.qty++;
+            } else {
+                keranjang.push({ id: id, qty: 1 });
+            }
+            perbaruiTampilanKeranjang();
+            alert(produk.title + ' dimasukkan ke dalam keranjang logistik!');
+        }
+
+        function perbaruiTampilanKeranjang() {
+            const listContainer = document.querySelector('.cart-items-list');
+            let totalBadge = 0;
+            let subtotal = 0;
+
+            if (keranjang.length === 0) {
+                document.getElementById('cart-badge').innerText = '0';
+                document.getElementById('subtotal-val').innerText = 'Rp 0';
+                document.getElementById('total-val').innerText = 'Rp 0';
+                listContainer.innerHTML = `
+                    <div style="text-align: center; padding: 40px; color: #888;">
+                        <i class="fa-solid fa-folder-open" style="font-size: 48px; margin-bottom: 15px;"></i>
+                        <p>Keranjang logistik Anda kosong.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            listContainer.innerHTML = '';
+
+            keranjang.forEach(item => {
+                const info = dataProduk[item.id];
+                totalBadge += item.qty;
+                const totalHargaItem = info.price * item.qty;
+                subtotal += totalHargaItem;
+
+                const row = document.createElement('div');
+                row.className = 'cart-item-row';
+                row.innerHTML = `
+                    <img src="${info.img}" alt="${info.title}">
+                    <div class="cart-item-detail">
+                        <h4>${info.title}</h4>
+                        <p>${info.country}</p>
+                    </div>
+                    <div class="cart-item-qty">
+                        <button class="qty-btn" onclick="kurangiItem('${item.id}')"><i class="fa-solid fa-minus"></i></button>
+                        <span>${item.qty}</span>
+                        <button class="qty-btn" onclick="tambahItemKelola('${item.id}')"><i class="fa-solid fa-plus"></i></button>
+                    </div>
+                    <div class="cart-item-price">
+                        <span>Rp ${totalHargaItem.toLocaleString('id-ID')}</span>
+                        <button class="btn-remove" onclick="hapusItemSpesifik('${item.id}')"><i class="fa-solid fa-trash-can"></i></button>
+                    </div>
+                `;
+                listContainer.appendChild(row);
+            });
+
+            document.getElementById('cart-badge').innerText = totalBadge;
+            document.getElementById('subtotal-val').innerText = 'Rp ' + subtotal.toLocaleString('id-ID');
+            document.getElementById('total-val').innerText = 'Rp ' + subtotal.toLocaleString('id-ID');
+        }
+
+        function kurangiItem(id) {
+            const item = keranjang.find(i => i.id === id);
+            if (!item) return;
+
+            if (item.qty === 1) {
+                keranjang = keranjang.filter(i => i.id !== id);
+            } else {
+                item.qty--;
+            }
+            perbaruiTampilanKeranjang();
+        }
+
+        function tambahItemKelola(id) {
+            const item = keranjang.find(i => i.id === id);
+            if (item) {
+                item.qty++;
+                perbaruiTampilanKeranjang();
+            }
+        }
+
+        function hapusItemSpesifik(id) {
+            if (confirm('Apakah Anda yakin ingin menghapus item logistik ini dari keranjang?')) {
+                keranjang = keranjang.filter(i => i.id !== id);
+                perbaruiTampilanKeranjang();
+            }
+        }
+
+        function bukaDeskripsi(id) {
+            const produk = dataProduk[id];
+            if (produk) {
+                document.getElementById('modal-title').innerText = produk.title;
+                document.getElementById('modal-country').innerText = produk.country;
+                document.getElementById('modal-img').src = produk.img;
+                document.getElementById('modal-img').alt = produk.title;
+                document.getElementById('modal-desc-text').innerText = produk.desc;
+                document.getElementById('modal-specs-text').innerHTML = produk.specs;
+                document.getElementById('product-modal').style.display = 'flex';
+            }
+        }
+
+        function tutupDeskripsi() {
+            document.getElementById('product-modal').style.display = 'none';
+        }
+
+        function bukaKeranjang() {
+            document.getElementById('beranda').style.display = 'none';
+            document.getElementById('seragam').style.display = 'none';
+            document.getElementById('senjata').style.display = 'none';
+            document.getElementById('intel').style.display = 'none';
+            document.getElementById('checkout-page').style.display = 'none';
+            document.getElementById('keranjang-page').style.display = 'block';
+            perbaruiTampilanKeranjang();
+        }
+
+        function kembaliKeBeranda() {
+            document.getElementById('beranda').style.display = 'block';
+            document.getElementById('seragam').style.display = 'block';
+            document.getElementById('senjata').style.display = 'block';
+            document.getElementById('intel').style.display = 'block';
+            document.getElementById('keranjang-page').style.display = 'none';
+            document.getElementById('checkout-page').style.display = 'none';
+        }
+
+        function bukaCheckout() {
+            if(keranjang.length === 0) {
+                alert('Keranjang kosong! Silakan pilih logistik terlebih dahulu.');
+                return;
+            }
+            document.getElementById('keranjang-page').style.display = 'none';
+            document.getElementById('checkout-page').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
